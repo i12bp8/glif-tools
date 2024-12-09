@@ -2,12 +2,13 @@
 
 <div align="center">
 
-![GLIF Tools Logo](assets/logo.png)
-
 *Enhance your GLIF.APP experience with a set of useful tools*
 
 [![Chrome Web Store](https://img.shields.io/badge/Chrome%20Web%20Store-Coming%20Soon-gray?style=for-the-badge&logo=google-chrome&logoColor=white)](https://chrome.google.com/webstore)
-[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/yourusername/glif-tools)
+[![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/i12bp8/glif-tools)
+
+![image](https://github.com/user-attachments/assets/010ba500-dd6c-417f-afc3-d53fd934a57d)
+
 
 </div>
 
@@ -15,6 +16,7 @@
 
 ### 1. Private/Public Toggles
 Users can easily switch between private and public modes using a toggle button. This allows for flexible privacy settings when generating images. The private mode ensures that the generated images are not accessible to anyone else, while the public mode allows users to share their images with others.
+
 
 ### 2. Image History
 The extension saves generated images to an image history with extensive metadata. Users can view their past images, which includes details like the type (private/public), prompt used, and timestamps of creation. The history can be filtered by visibility (private or public) and searched by prompt. This feature enables users to keep track of their previous generations and easily access them whenever needed.
@@ -73,9 +75,6 @@ Contributions are welcome! Please feel free to submit a Pull Request.
 4. Push to the branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ## 📞 Support
 
