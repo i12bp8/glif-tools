@@ -1,0 +1,63 @@
+.privacy-toggle-container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-end !important;
+    margin-top: 8px !important;
+    width: 100% !important;
+}
+
+/* Override Tailwind classes with high specificity */
+html body .privacy-toggle-container button.privacy-toggle-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: 0 16px !important;
+    border-radius: 6px !important;
+    color: #ffffff !important;
+    cursor: pointer !important;
+    transition: all 0.2s ease !important;
+    font-size: 14px !important;
+    font-weight: 500 !important;
+    border: none !important;
+    height: 48px !important;
+    min-height: 48px !important;
+    white-space: nowrap !important;
+    width: 100% !important;
+}
+
+button.privacy-toggle-btn:hover {
+    opacity: 0.9;
+}
+
+/* State styles with high specificity */
+html body .privacy-toggle-container button.privacy-toggle-btn[data-private="true"] {
+    background-color: #dc2626 !important;
+}
+
+html body .privacy-toggle-container button.privacy-toggle-btn[data-private="false"] {
+    background-color: #000000 !important;
+}
+
+.privacy-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.privacy-icon svg {
+    stroke: currentColor;
+}
+
+.privacy-label {
+    font-weight: 500;
+}
+
+/* Dark mode support with matching specificity */
+html body[data-theme="dark"] .privacy-toggle-container button.privacy-toggle-btn[data-private="false"] {
+    background-color: #1a1a1a !important;
+}
+
+html body[data-theme="dark"] .privacy-toggle-container button.privacy-toggle-btn[data-private="true"] {
+    background-color: #dc2626 !important;
+}

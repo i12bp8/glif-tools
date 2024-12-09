@@ -1,0 +1,81 @@
+:root {
+    /* Light theme variables */
+    --primary-bg: #ffffff;
+    --secondary-bg: #f8fafc;
+    --primary-text: #2d3748;
+    --secondary-text: #718096;
+    --accent-color: #4F46E5;
+    --border-color: #edf2f7;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.05);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.15);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.35);
+
+    /* RGB values for opacity support */
+    --surface-color-rgb: 255, 255, 255;
+    --surface-color-alt-rgb: 248, 250, 252;
+    --border-color-rgb: 237, 242, 247;
+    --text-color-rgb: 45, 55, 72;
+    
+    /* Status colors */
+    --success-color: #10B981;
+    --warning-color: #F59E0B;
+    --error-color: #EF4444;
+    --info-color: #3B82F6;
+    
+    /* Status backgrounds */
+    --success-bg: rgba(16, 185, 129, 0.1);
+    --warning-bg: rgba(245, 158, 11, 0.1);
+    --error-bg: rgba(239, 68, 68, 0.1);
+    --info-bg: rgba(59, 130, 246, 0.1);
+    
+    /* Status text colors */
+    --success-text: #059669;
+    --warning-text: #D97706;
+    --error-text: #DC2626;
+    --info-text: #2563EB;
+}
+
+[data-glif-dark-mode="true"] {
+    /* Dark theme variables */
+    --primary-bg: #1E1E1E;
+    --secondary-bg: #2A2A2A;
+    --primary-text: #FFFFFF;
+    --secondary-text: #6B7280;
+    --accent-color: #6366F1;
+    --border-color: #2E2E2E;
+    --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.2);
+    --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.35);
+    --shadow-lg: 0 8px 24px rgba(0, 0, 0, 0.5);
+
+    /* RGB values for opacity support */
+    --surface-color-rgb: 30, 30, 30;
+    --surface-color-alt-rgb: 42, 42, 42;
+    --border-color-rgb: 46, 46, 46;
+    --text-color-rgb: 255, 255, 255;
+    
+    /* Status colors - darker variants */
+    --success-color: #059669;
+    --warning-color: #D97706;
+    --error-color: #DC2626;
+    --info-color: #2563EB;
+    
+    /* Status backgrounds - darker variants */
+    --success-bg: rgba(5, 150, 105, 0.15);
+    --warning-bg: rgba(217, 119, 6, 0.15);
+    --error-bg: rgba(220, 38, 38, 0.15);
+    --info-bg: rgba(37, 99, 235, 0.15);
+    
+    /* Status text colors - lighter variants */
+    --success-text: #34D399;
+    --warning-text: #FBBF24;
+    --error-text: #F87171;
+    --info-text: #60A5FA;
+}
+
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}

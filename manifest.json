@@ -1,0 +1,65 @@
+{
+  "manifest_version": 3,
+  "name": "GLIF Tools",
+  "version": "1.0.0",
+  "description": "An enhanced set of tools for glif.app with modern UI",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "declarativeNetRequest",
+    "webRequest",
+    "unlimitedStorage"
+  ],
+  "host_permissions": [
+    "https://glif.app/*"
+  ],
+  "background": {
+    "service_worker": "js/background.js",
+    "type": "module"
+  },
+  "declarative_net_request": {
+    "rule_resources": [{
+      "id": "ruleset_1",
+      "enabled": true,
+      "path": "rules.json"
+    }]
+  },
+  "action": {
+    "default_icon": {
+      "16": "assets/icons/icon16.png",
+      "48": "assets/icons/icon48.png",
+      "128": "assets/icons/icon128.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://glif.app/*"],
+      "css": [
+        "styles/batch-generator.css",
+        "styles/privacy-toggle.css",
+        "styles/theme.css",
+        "styles/components.css",
+        "styles/history-panel.css",
+        "styles/navbar.css",
+        "styles/feedback-panel.css",
+        "css/batch-generator.css",
+        "css/searchrun.css"
+      ],
+      "js": [
+        "js/components/privacy-toggle.js",
+        "js/icons.js",
+        "js/utils.js",
+        "js/components/navbar.js",
+        "js/components/feedback-panel.js",
+        "js/modules/batch-generator.js",
+        "js/modules/history.js",
+        "js/searchrun.js",
+        "js/main.js"
+      ]
+    }
+  ],
+  "web_accessible_resources": [{
+    "resources": ["js/pageScript.js"],
+    "matches": ["https://glif.app/*"]
+  }]
+}

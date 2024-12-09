@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "priority": 1,
+    "action": {
+      "type": "redirect",
+      "redirect": {
+        "transform": {
+          "queryTransform": {
+            "addOrReplaceParams": [{
+              "key": "glifRunIsPublic",
+              "value": "false"
+            }]
+          }
+        }
+      }
+    },
+    "condition": {
+      "urlFilter": "*glif.app/api/run-glif*",
+      "resourceTypes": ["xmlhttprequest"]
+    }
+  }
+]

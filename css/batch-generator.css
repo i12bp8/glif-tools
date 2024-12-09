@@ -1,0 +1,262 @@
+.batch-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(8px);
+    z-index: 9998;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.ai-batch-overlay {
+    display: none;
+}
+
+.batch-results-container {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 1200px;
+    max-height: 90vh;
+    overflow-y: auto;
+    z-index: 9999;
+    padding: 24px;
+    box-sizing: border-box;
+}
+
+.batch-results-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 24px;
+}
+
+.batch-results-header h3 {
+    margin: 0;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.batch-results-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+    gap: 24px;
+    margin-bottom: 24px;
+    width: 100%;
+}
+
+.batch-result-card {
+    background: #ffffff;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.2s;
+    border: 1px solid #eee;
+    display: flex;
+    flex-direction: column;
+}
+
+.batch-result-card:hover {
+    transform: translateY(-2px);
+}
+
+.preview-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 100%; /* 1:1 Aspect Ratio */
+    background: #ffffff;
+    border-radius: 8px 8px 0 0;
+}
+
+.preview-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 8px 8px 0 0;
+}
+
+.placeholder {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffffff;
+    border-radius: 8px;
+}
+
+.loading-spinner {
+    width: 48px;
+    height: 48px;
+    color: #666;
+}
+
+.loading-spinner svg {
+    width: 100%;
+    height: 100%;
+    animation: spin 1s linear infinite;
+}
+
+.prompt-text {
+    padding: 12px 16px;
+    font-size: 14px;
+    color: #333;
+    max-height: 60px;
+    overflow-y: auto;
+    margin: 0;
+    flex-grow: 1;
+}
+
+.status {
+    padding: 8px 16px 12px;
+    font-size: 12px;
+    color: #666;
+    margin: 0;
+}
+
+.status-text {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.status-text.success {
+    color: #28a745;
+}
+
+.error-text {
+    color: #dc3545;
+}
+
+.error-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    color: #dc3545;
+}
+
+.batch-progress {
+    margin-top: 24px;
+    padding: 16px;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.progress-bar {
+    height: 4px;
+    background: #e9ecef;
+    border-radius: 2px;
+    overflow: hidden;
+    margin-bottom: 8px;
+}
+
+.progress-fill {
+    height: 100%;
+    background: #000000;
+    transition: width 0.3s ease;
+}
+
+.progress-text {
+    font-size: 14px;
+    color: #666;
+}
+
+.review-actions {
+    display: flex;
+    justify-content: center;
+    padding: 24px 0;
+    margin-top: 24px;
+    border-top: 1px solid #eee;
+}
+
+.ai-generate-button {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 12px 24px;
+    background: #000000;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.ai-generate-button:hover {
+    background: #333333;
+    transform: translateY(-1px);
+}
+
+.ai-generate-button:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+    transform: none;
+}
+
+@media (max-width: 768px) {
+    .batch-results-container {
+        width: 100%;
+        height: 100vh;
+        max-height: 100vh;
+        top: 0;
+        left: 0;
+        transform: none;
+        border-radius: 0;
+        padding: 16px;
+    }
+
+    .batch-results-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
+    }
+
+    .batch-result-card {
+        margin: 0;
+        height: auto;
+    }
+
+    .preview-container {
+        padding-bottom: 100%;
+    }
+
+    .prompt-text {
+        max-height: none;
+    }
+
+    .review-actions {
+        position: sticky;
+        bottom: 0;
+        background: white;
+        margin: 0 -16px;
+        padding: 16px;
+        box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.05);
+    }
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

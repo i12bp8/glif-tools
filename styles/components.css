@@ -1,0 +1,92 @@
+/* Navbar Tools Dropdown */
+.glif-tools-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.glif-tools-button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 12px;
+  background: transparent;
+  border: none;
+  color: var(--primary-text);
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 6px;
+  transition: background-color 0.2s ease;
+}
+
+.glif-tools-button:hover {
+  background: var(--secondary-bg);
+}
+
+.glif-tools-menu {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  background: var(--primary-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  box-shadow: var(--shadow-md);
+  padding: 8px;
+  min-width: 150px;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.2s ease;
+}
+
+.glif-tools-menu.active {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.glif-tools-menu-item {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 10px 16px;
+  color: var(--primary-text);
+  text-decoration: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 100%;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+  text-align: center;
+}
+
+.glif-tools-menu-item:hover {
+  background: var(--secondary-bg);
+}
+
+.glif-tools-menu-item svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  color: var(--primary-text);
+}
+
+.glif-tools-credits {
+  margin-top: 8px;
+  padding-top: 8px;
+  border-top: 1px solid var(--border-color);
+  font-size: 12px;
+  color: var(--secondary-text);
+  text-align: center;
+}
+
+.glif-tools-credits a {
+  color: var(--accent-color);
+  text-decoration: none;
+}
+
+.glif-tools-credits a:hover {
+  text-decoration: underline;
+}
