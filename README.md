@@ -40,7 +40,7 @@ A search button enables users to filter through their image history based on pro
 ### Method 2: Manual Installation
 1. Download this repository or clone it:
    ```bash
-   git clone https://github.com/yourusername/glif-tools.git
+   git clone https://github.com/i12bp8/glif-tools.git
    ```
 2. Open Chrome/Edge/Brave browser
 3. Go to Extensions page (`chrome://extensions`, `edge://extensions`, or `brave://extensions`)
